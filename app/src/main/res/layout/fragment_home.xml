@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--android:background="@android:color/white"-->
+    <include layout="@layout/fragment_home_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|bottom"
+            android:orientation="vertical">
+            <!--
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/homefragment_lubo_vp"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:background="@mipmap/gallery_test" />
+                            -->
+            <RelativeLayout
+                android:id="@+id/view_pager_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <LinearLayout
+                    android:id="@+id/home_fragment_circle_img_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/homefragment_lubo_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:padding="3dp"
+                    android:text="公告"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/home_fragment_animotinText_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="货运快线开发中..."
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TableLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/home_fragment_release_goods_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_release_goods"
+                        android:gravity="center"
+                        android:text="发布货源" />
+
+                    <TextView
+                        android:id="@+id/home_fragment_comment_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_comment"
+                        android:gravity="center"
+                        android:text="信用评价" />
+
+                    <TextView
+                        android:id="@+id/home_fragment_shunfengcar_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_car"
+                        android:gravity="center"
+                        android:text="顺风车" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/home_fragment_my_goods_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_my_goods"
+                        android:gravity="center"
+                        android:text="我的货源" />
+
+                    <TextView
+                        android:id="@+id/home_fragment_near_goods_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_near_goods"
+                        android:gravity="center"
+                        android:text="附近物流" />
+
+                    <TextView
+                        android:id="@+id/home_fragment_my_order_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:drawableTop="@mipmap/icon_near_goods"
+                        android:gravity="center"
+                        android:text="我的订单" />
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_fragment_insurance_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:text="货运保险" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_insurance" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_table_item"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_fragment_baoxiang_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:text="货运宝箱" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_baoxiang" />
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

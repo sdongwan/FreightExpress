@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:mContext="com.highspace.hs.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_activity_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@mipmap/bg_tab"
+        android:orientation="vertical"
+        android:paddingTop="3dp">
+
+
+        <RadioGroup
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/main_activity_tab_home_rbt"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_activity_tab_home_rbt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_home"
+                android:button="@null"
+
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
+
+
+            <RadioButton
+                android:id="@+id/main_activity_tab_wuliu_rbt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_waybill"
+                android:button="@null"
+
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
+            <!--
+                        <RadioButton
+                            android:id="@+id/tab_waybill"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_tab_waybill"
+                            android:button="@null"
+
+                            android:scaleX="0.8"
+                            android:scaleY="0.8" />
+                            -->
+
+            <RadioButton
+                android:id="@+id/main_activity_tab_my_rbt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_my"
+                android:button="@null"
+
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>
