@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.highspace.hs.MainActivity;
 import com.highspace.hs.R;
 import com.highspace.hs.activity.MyAddressActivity;
 import com.highspace.hs.activity.MyCaiWuActivity;
@@ -104,7 +105,7 @@ public class MyFragment extends Fragment {
         mMyAddressRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), MyAddressActivity.class));
+                startActivity(new Intent(getActivity(), MyAddressActivity.class));
             }
         });
         /*
