@@ -14,6 +14,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+=======
+import com.highspace.hs.MainActivity;
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 import com.highspace.hs.R;
 import com.highspace.hs.activity.MyAddressActivity;
 import com.highspace.hs.activity.MyCaiWuActivity;
@@ -104,7 +108,11 @@ public class MyFragment extends Fragment {
         mMyAddressRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 startActivity(new Intent(getContext(), MyAddressActivity.class));
+=======
+                startActivity(new Intent(getActivity(), MyAddressActivity.class));
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
             }
         });
         /*

@@ -59,9 +59,14 @@ public class WuLiuAdapter extends BaseAdapter {
         }
         viewHolder.mNameTV.setText("XXX物流有限公司");
         viewHolder.mJianjieTv.setText("广东省江门市XXXXX");
+<<<<<<< HEAD
 
         // TODO: 2016/9/27 图片大小设置   ImageLoadUtil.getImageLoader(mContext).displayImage("http://www.sdongwan.top/images/a.png", viewHolder.mImg);
         viewHolder.mImg.setImageResource(R.mipmap.icon_no_img);
+=======
+        ImageLoadUtil.getImageLoader(mContext).displayImage("http://www.sdongwan.top/images/a.png", viewHolder.mImg);
+        // TODO: 2016/9/27 图片大小设置
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
         return convertView;
 

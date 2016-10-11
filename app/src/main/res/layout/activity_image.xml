@@ -7,7 +7,11 @@
         android:id="@+id/image_activity_back_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:src="@mipmap/icon_jiantou" />
+=======
+        android:src="@mipmap/ic_launcher" />
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
 
     <android.support.v4.view.ViewPager

@@ -19,7 +19,11 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
+<<<<<<< HEAD
                 android:layout_height="40dp"
+=======
+                android:layout_height="43dp"
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
                 android:background="@android:color/white">
                 <!--
                             <ImageView
@@ -43,7 +47,11 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
+<<<<<<< HEAD
                 android:background="@android:color/darker_gray" />
+=======
+                android:background="@android:color/black" />
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,7 +86,11 @@
                     android:layout_width="0.01dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+<<<<<<< HEAD
                     android:background="@android:color/darker_gray" />
+=======
+                    android:background="@android:color/black" />
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
                 <LinearLayout
                     android:id="@+id/wuliu_fragment_destplace_ll"
@@ -140,25 +152,41 @@
             android:id="@+id/wuliu_fragment_main"
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
+<<<<<<< HEAD
             android:background="@android:color/darker_gray" />
+=======
+            android:background="@android:color/black" />
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
+<<<<<<< HEAD
             <View
                 android:id="@+id/wuliu_fragment_gray_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#66000000"
                 android:visibility="gone" />
+=======
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 
             <com.highspace.hs.view.XListView
                 android:id="@+id/wuliu_fragment_xListView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:listSelector="@drawable/selector_table_item" />
+<<<<<<< HEAD
+=======
+            <View
+                android:id="@+id/wuliu_fragment_gray_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:visibility="gone" />
+>>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
         </FrameLayout>
     </LinearLayout>
 </RelativeLayout>
