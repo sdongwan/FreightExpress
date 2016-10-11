@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-<<<<<<< HEAD
     android:layout_height="40dp"
-=======
-    android:layout_height="43dp"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
     android:background="@android:color/white">
 
 
@@ -15,15 +11,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-<<<<<<< HEAD
+
         android:layout_margin="6dp"
         android:scaleY="1.5"
         android:scaleX="1.5"
-=======
-        android:layout_margin="8dp"
-        android:scaleY="1.1"
-        android:scaleX="1.1"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
         android:src="@mipmap/icon_locate" />
 
     <TextView
@@ -44,11 +36,8 @@
         android:layout_margin="8dp"
         android:text="货运快线"
         android:textColor="@android:color/black"
-<<<<<<< HEAD
         android:textSize="16sp" />
-=======
-        android:textSize="17sp" />
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
     <ImageView
         android:id="@+id/home_fragment_titlebar_saoma_iv"
@@ -63,10 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.1dp"
         android:layout_alignParentBottom="true"
-<<<<<<< HEAD
         android:background="@android:color/darker_gray" />
-=======
-        android:background="@android:color/black" />
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
 </RelativeLayout>

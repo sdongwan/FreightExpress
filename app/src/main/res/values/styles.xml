@@ -10,7 +10,7 @@
 
 
     </style>
-<<<<<<< HEAD
+
     <style name="ActTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <!-- Customize your theme here.
         <item_selector name="colorPrimary">@color/colorPrimary</item_selector>
@@ -20,8 +20,7 @@
 <item name="android:windowIsTranslucent">true</item>
 
     </style>
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
     <style name="Progress_Dialog_Style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>

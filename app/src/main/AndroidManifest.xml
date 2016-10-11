@@ -70,10 +70,9 @@
         <activity android:name=".activity.ReleaseGoodsActivity" />
         <activity android:name=".activity.NearGoodsActivity" />
         <activity android:name=".activity.MyGoodsActivity" />
-<<<<<<< HEAD
-=======
+
         <activity android:name=".activity.StartAddressActivity"/>
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
         <provider
             android:name=".db.GoodsContenProvider"
@@ -81,12 +80,10 @@
 
         <activity android:name=".activity.MyCommentActivity" />
         <activity android:name=".activity.MyOrderActivity" />
-<<<<<<< HEAD
+
         <activity android:name=".activity.WelcomeActivity"
             android:theme="@style/ActTheme">
-=======
-        <activity android:name=".activity.WelcomeActivity">
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -3,10 +3,9 @@ package com.highspace.hs.fragment;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
-<<<<<<< HEAD
+
 import android.graphics.BitmapFactory;
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -45,10 +44,9 @@ import com.highspace.hs.util.ImageLoadUtil;
 import com.highspace.hs.util.MobleUtil;
 import com.highspace.hs.util.SharedPreferencesUtil;
 import com.highspace.hs.view.LoadProgressDialog;
-<<<<<<< HEAD
+
 import com.nostra13.universalimageloader.core.assist.FailReason;
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
@@ -90,10 +88,9 @@ public class HomeFragment extends Fragment {
     private TextView mMyGoodsTV;
 
     private TextView mComment;
-<<<<<<< HEAD
+
     private Animation mAnimation;
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
 
     private String mPlace = "";
@@ -142,15 +139,13 @@ public class HomeFragment extends Fragment {
 
         mLocationClient.unRegisterLocationListener(mMyListener);
         mLocationClient.stop();
-<<<<<<< HEAD
+
         mAnimotionTextTv.clearAnimation();
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
     }
 
     @Override
-<<<<<<< HEAD
     public void onStart() {
         super.onStart();
         if(mAnimation!=null){
@@ -159,8 +154,7 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
     public void onDestroyView() {
         super.onDestroyView();
         mTimer.cancel();
@@ -256,13 +250,10 @@ public class HomeFragment extends Fragment {
 
             }
         });
-<<<<<<< HEAD
+
         mAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.text_bottom_to_top);
         mAnimotionTextTv.startAnimation(mAnimation);
-=======
-        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.text_bottom_to_top);
-        mAnimotionTextTv.startAnimation(animation);
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
 
         mMyOrderTV.setOnClickListener(new View.OnClickListener() {
@@ -315,20 +306,19 @@ public class HomeFragment extends Fragment {
                     imageView.setImageBitmap(target);
 
                 }
-<<<<<<< HEAD
+
 
                 @Override
                 public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
                     super.onLoadingFailed(imageUri, view, failReason);
-                    Bitmap loadedImage = BitmapFactory.decodeResource(getResources(),R.mipmap.icon_no_img);
+                    Bitmap loadedImage = BitmapFactory.decodeResource(getActivity().getResources(),R.mipmap.icon_no_img);
                     Bitmap target = Bitmap.createBitmap(MobleUtil.getScreenWith(getContext()), DensityUtil.dp2px(getContext(), 180), loadedImage.getConfig());
                     Canvas canvas = new Canvas(target);
                     canvas.drawBitmap(loadedImage, null, new Rect(0, 0, target.getWidth(), target.getHeight()), null);
                     imageView.setImageBitmap(target);
 
                 }
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
             });
 
             mImageViewList.add(imageView);

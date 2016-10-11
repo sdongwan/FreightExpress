@@ -1,14 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-
     android:orientation="vertical">
 
-=======
-    android:orientation="vertical">
-    <!--android:background="@android:color/white"-->
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
     <include layout="@layout/fragment_home_titlebar" />
 
     <ScrollView
@@ -55,11 +49,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-<<<<<<< HEAD
                 android:background="@android:color/darker_gray" />
-=======
-                android:background="@android:color/black" />
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,21 +66,7 @@
                     android:text="公告"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
-<<<<<<< HEAD
-<!--
-=======
 
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:src="@mipmap/ic_launcher" />
-<<<<<<< HEAD
--->
-=======
-
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,7 +81,6 @@
                         android:textColor="@android:color/black"
                         android:textSize="15sp" />
                 </LinearLayout>
-<<<<<<< HEAD
 
             </LinearLayout>
 
@@ -113,10 +89,7 @@
                 android:layout_height="0.1dp"
                 android:background="@android:color/darker_gray" />
 
-=======
-            </LinearLayout>
 
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
             <TableLayout
 
                 android:layout_width="match_parent"
@@ -130,11 +103,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_release_goods"
                         android:gravity="center"
@@ -146,11 +117,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_comment"
                         android:gravity="center"
@@ -162,11 +131,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_car"
                         android:gravity="center"
@@ -182,11 +149,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_my_goods"
                         android:gravity="center"
@@ -198,11 +163,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_near_goods"
                         android:gravity="center"
@@ -214,11 +177,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:drawableTop="@mipmap/icon_near_goods"
                         android:gravity="center"
@@ -226,14 +187,13 @@
 
                 </TableRow>
 
-<<<<<<< HEAD
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp"
                     android:background="@android:color/darker_gray" />
 
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                 <TableRow android:layout_marginTop="20dp">
 
                     <LinearLayout
@@ -241,11 +201,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:gravity="center"
                         android:orientation="horizontal"
@@ -269,11 +227,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="0.1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
+
                         android:background="@android:color/white"
-=======
-                        android:background="@drawable/selector_table_item"
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
                         android:clickable="true"
                         android:gravity="center"
                         android:orientation="horizontal"

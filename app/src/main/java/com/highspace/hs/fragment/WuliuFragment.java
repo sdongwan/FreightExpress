@@ -279,11 +279,9 @@ public class WuliuFragment extends Fragment {
         mStartPopw.setOutsideTouchable(true);
         // 设置此参数获得焦点，否则无法点击
         mStartPopw.setFocusable(true);
-<<<<<<< HEAD
+
         //mStartPopw.setAnimationStyle(R.style.pop_anim_style);
-=======
-        mStartPopw.setAnimationStyle(R.style.pop_anim_style);
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
 
         View paixupopupview = mLayoutInflater.inflate(R.layout.ppw_shaixuan, null);
@@ -295,11 +293,9 @@ public class WuliuFragment extends Fragment {
         // 设置此参数获得焦点，否则无法点击
         mSortPopw.setFocusable(true);
 
-<<<<<<< HEAD
+
        // mSortPopw.setAnimationStyle(R.style.pop_anim_style);
-=======
-        mSortPopw.setAnimationStyle(R.style.pop_anim_style);
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
         mPaixuPopwLv = (ListView) paixupopupview.findViewById(R.id.popw_shaixuan_lv);
         ArrayList paixuList = new ArrayList();

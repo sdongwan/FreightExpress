@@ -5,11 +5,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-<<<<<<< HEAD
+
         classpath 'com.android.tools.build:gradle:2.1.0'
-=======
-        classpath 'com.android.tools.build:gradle:2.2.0'
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
+
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,10 +19,7 @@ allprojects {
         jcenter()
         maven { url "https://jitpack.io" }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
 }
 
 task clean(type: Delete) {

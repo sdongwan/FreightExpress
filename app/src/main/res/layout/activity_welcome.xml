@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -17,10 +16,3 @@
 </FrameLayout>
 
 
-=======
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="fitCenter"
-    android:src="@mipmap/icon_welcome" />
->>>>>>> 433f09f3fb0000d00d2aef21fb4f6e8c07784721
