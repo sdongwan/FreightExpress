@@ -15,12 +15,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_gravity="bottom"
-        android:background="@mipmap/bg_tab"
+        android:background="#F4F4F4"
         android:orientation="vertical"
         android:paddingTop="3dp">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/darker_gray" />
 
         <RadioGroup
             android:id="@+id/tab_bar"
@@ -36,7 +40,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_tab_home"
                 android:button="@null"
-
                 android:scaleX="0.8"
                 android:scaleY="0.8" />
 

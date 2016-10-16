@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
 import com.highspace.hs.R;
 
 import java.util.ArrayList;
@@ -20,14 +19,17 @@ import java.util.ArrayList;
 
 public class UserLoginAdapter extends PagerAdapter {
 
-    private String pageNames[] = new String[]{"货主登陆", "车主登陆"};
+    private String pageNames[] = new String[]{"密码登陆", "短信登陆"};
 
 
-    private Button mMiMaLoginBtn;
+    private Button mPasswordLoginBtn;
     private Button mMessageLoginBtn;
 
+    private Button mMessageRegisterBtn;
+    private Button mPasswordRegisterBtn;
 
-   // private Context context;
+
+    // private Context context;
 
 
     private ArrayList<View> mPageViews;
@@ -35,17 +37,26 @@ public class UserLoginAdapter extends PagerAdapter {
     private LayoutInflater mLayoutInflater;
 
 
-
-
-    private OnMiMaLoginBtnOnClickListener onMiMaLoginBtnOnClickListener;
+    private OnPasswordLoginBtnOnClickListener onPasswordLoginBtnOnClickListener;
     private OnMessageLoginBtnOnClickListener onMessageLoginBtnOnClickListener;
+
+    private OnMessageRegisterBtnOnClickListener onMessageRegisterBtnOnClickListener;
+    private OnPasswordRegisterBtnOnClickListener onPasswordRegisterBtnOnClickListener;
 
     public void setOnMessageLoginBtnOnClickListener(OnMessageLoginBtnOnClickListener onMessageLoginBtnOnClickListener) {
         this.onMessageLoginBtnOnClickListener = onMessageLoginBtnOnClickListener;
     }
 
-    public void setOnMiMaLoginBtnOnClickListener(OnMiMaLoginBtnOnClickListener onMiMaLoginBtnOnClickListener) {
-        this.onMiMaLoginBtnOnClickListener = onMiMaLoginBtnOnClickListener;
+    public void setOnPasswordLoginBtnOnClickListener(OnPasswordLoginBtnOnClickListener onPasswordLoginBtnOnClickListener) {
+        this.onPasswordLoginBtnOnClickListener = onPasswordLoginBtnOnClickListener;
+    }
+
+    public void setOnPasswordRegisterBtnOnClickListener(OnPasswordRegisterBtnOnClickListener onPasswordRegisterBtnOnClickListener) {
+        this.onPasswordRegisterBtnOnClickListener = onPasswordRegisterBtnOnClickListener;
+    }
+
+    public void setOnMessageRegisterBtnOnClickListener(OnMessageRegisterBtnOnClickListener onMessageRegisterBtnOnClickListener) {
+        this.onMessageRegisterBtnOnClickListener = onMessageRegisterBtnOnClickListener;
     }
 
     public UserLoginAdapter(Context context) {
@@ -58,24 +69,27 @@ public class UserLoginAdapter extends PagerAdapter {
 
 
     private void initContent() {
-        View mimaView = mLayoutInflater.inflate(R.layout.activity_login_mima, null);
-        View yanzhengmaView = mLayoutInflater.inflate(R.layout.activity_login_message, null);
+        View passwordView = mLayoutInflater.inflate(R.layout.activity_login_mima, null);
+        View messageView = mLayoutInflater.inflate(R.layout.activity_login_message, null);
 
-        mMiMaLoginBtn = (Button) mimaView.findViewById(R.id.login_mima_loginbtn);
-        mMessageLoginBtn = (Button) yanzhengmaView.findViewById(R.id.login_message_login_btn);
+        mPasswordLoginBtn = (Button) passwordView.findViewById(R.id.login_mima_loginbtn);
+        mMessageLoginBtn = (Button) messageView.findViewById(R.id.login_message_login_btn);
 
-
-        mPageViews.add(mimaView);
-        //mPageViews.add(mimaView);
-        mPageViews.add(yanzhengmaView);
+        mMessageRegisterBtn = (Button) messageView.findViewById(R.id.login_message_register_btn);
+        mPasswordRegisterBtn = (Button) passwordView.findViewById(R.id.login_mima_register_btn);
 
 
-        mMiMaLoginBtn.setOnClickListener(new View.OnClickListener() {
+        mPageViews.add(passwordView);
+        //mPageViews.add(passwordView);
+        mPageViews.add(messageView);
+
+
+        mPasswordLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (onMiMaLoginBtnOnClickListener != null) {
+                if (onPasswordLoginBtnOnClickListener != null) {
 
-                    onMiMaLoginBtnOnClickListener.miMaLoginBtnOnClick(v);
+                    onPasswordLoginBtnOnClickListener.passwordLoginBtnOnClick(v);
                 }
 
                 // context.startActivity(new Intent(context, MainActivity.class));
@@ -100,7 +114,23 @@ public class UserLoginAdapter extends PagerAdapter {
             }
         });
 
+        mPasswordRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onPasswordRegisterBtnOnClickListener != null) {
+                    onPasswordRegisterBtnOnClickListener.passwordRegisterBtnOnclick(v);
+                }
+            }
+        });
 
+        mMessageRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onMessageRegisterBtnOnClickListener != null) {
+                    onMessageRegisterBtnOnClickListener.messageRegisterBtnOnclick(v);
+                }
+            }
+        });
     }
 
     @Override
@@ -130,14 +160,24 @@ public class UserLoginAdapter extends PagerAdapter {
         container.removeView(mPageViews.get(position));
     }
 
-    public interface OnMiMaLoginBtnOnClickListener {
+    public interface OnPasswordLoginBtnOnClickListener {
 
-        public void miMaLoginBtnOnClick(View view);
+        public void passwordLoginBtnOnClick(View view);
 
+    }
+
+    public interface OnPasswordRegisterBtnOnClickListener {
+        public void passwordRegisterBtnOnclick(View view);
     }
 
     public interface OnMessageLoginBtnOnClickListener {
 
         public void messageloginBtnOnClick(View view);
     }
+
+    public interface OnMessageRegisterBtnOnClickListener {
+        public void messageRegisterBtnOnclick(View view);
+    }
+
+
 }

@@ -3,6 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="listview_item_unpressed">#b1b0b0</color>
+    <color name="listview_item_unpressed">#a9a6a6</color>
     <color name="listview_item_pressed">#fff</color>
 </resources>

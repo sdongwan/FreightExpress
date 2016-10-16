@@ -39,7 +39,7 @@ public class GoodsDBHelper {
         values.put("startPlace", goods.getStartPlace());
         values.put("destination", goods.getDestination());
         values.put("weight", goods.getWeight());
-        values.put("volume", goods.getVolume());
+       // values.put("volume", goods.getVolume());
         values.put("decribe", goods.getDecribe());
         values.put("phoneNum", goods.getPhoneNum());
         values.put("remark", goods.getRemark());

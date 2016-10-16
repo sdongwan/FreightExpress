@@ -45,7 +45,6 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-
                 android:background="@android:color/darker_gray" />
 
 
@@ -113,7 +112,7 @@
                     android:layout_width="0.01dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:background="@android:color/black" />
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/wuliu_fragment_paixu_ll"
@@ -156,19 +155,18 @@
 
 
 
-            <View
-                android:id="@+id/wuliu_fragment_gray_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#66000000"
-                android:visibility="gone" />
-
 
             <com.highspace.hs.view.XListView
                 android:id="@+id/wuliu_fragment_xListView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:listSelector="@drawable/selector_table_item" />
+            <View
+                android:id="@+id/wuliu_fragment_gray_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:visibility="gone" />
 
 
         </FrameLayout>

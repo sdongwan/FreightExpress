@@ -2,6 +2,7 @@ package com.highspace.hs.fragment;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,11 +32,7 @@ import java.util.ArrayList;
 public class WuliuFragment extends Fragment {
 
     private LinearLayout mPopwStartll;
-
-
     private LinearLayout mPopwDestll;
-
-
     private LinearLayout mPopwSortll;
 
     private PopupWindow mStartPopw;
@@ -55,8 +52,9 @@ public class WuliuFragment extends Fragment {
     private CityDBHelper mCityDbHelper;
 
 
-    private TextView mCityTextView;
-    private TextView mShaixuanTextView;
+    private TextView mStartTv;
+    private TextView mDestTv;
+    private TextView mSortTv;
 
     private boolean isTriangleDown = true;
 
@@ -74,11 +72,10 @@ public class WuliuFragment extends Fragment {
 
     private View mGrayView;
 
-    private TextView mDestTv;
-
 
     private boolean isCityPop = false;
     private LinearLayout mMain;
+
 
     public WuliuFragment() {
 
@@ -105,6 +102,8 @@ public class WuliuFragment extends Fragment {
         initViews(wuLiuLayout);
         initEvents();
         return wuLiuLayout;
+
+
     }
 
     private void initEvents() {
@@ -123,7 +122,7 @@ public class WuliuFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (isCityPop) {
-                    mCityTextView.setText("" + mPopwRightLvAdapter.getItem(position));
+                    mStartTv.setText("" + mPopwRightLvAdapter.getItem(position));
                 } else {
                     mDestTv.setText("" + mPopwRightLvAdapter.getItem(position));
                 }
@@ -134,7 +133,7 @@ public class WuliuFragment extends Fragment {
         mPaixuPopwLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mShaixuanTextView.setText(mPaixuAdapter.getItem(position) + "");
+                mSortTv.setText(mPaixuAdapter.getItem(position) + "");
                 mSortPopw.dismiss();
             }
         });
@@ -150,6 +149,9 @@ public class WuliuFragment extends Fragment {
                     mGrayView.setVisibility(View.GONE);
                 } else {
                     mStartPopw.showAsDropDown(v);
+                    mStartTv.setTextColor(Color.parseColor("#0498fb"));
+
+
                     isCityPop = true;
                     mGrayView.setVisibility(View.VISIBLE);
                     mGrayView.setClickable(false);
@@ -166,8 +168,10 @@ public class WuliuFragment extends Fragment {
                 if (isCityPop) {
                     ((ImageView) (mPopwStartll.getChildAt(1))).setImageResource(R.mipmap.icon_triangle_to_down);
                     mGrayView.setVisibility(View.GONE);
+                    mStartTv.setTextColor(Color.parseColor("#000000"));
                     isCityPop = false;
                 } else {
+                    mDestTv.setTextColor(Color.parseColor("#000000"));
                     ((ImageView) (mPopwDestll.getChildAt(1))).setImageResource(R.mipmap.icon_triangle_to_down);
                     mGrayView.setVisibility(View.GONE);
 
@@ -188,12 +192,12 @@ public class WuliuFragment extends Fragment {
                     mGrayView.setVisibility(View.GONE);
                 } else {
                     mStartPopw.showAsDropDown(v);
+                    mDestTv.setTextColor(Color.parseColor("#0498fb"));
                     //  mGrayView.setAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.pop_enter_anim));
                     mGrayView.setVisibility(View.VISIBLE);
                     mGrayView.setClickable(false);
                     mGrayView.setFocusable(false);
                     ((ImageView) (mPopwDestll.getChildAt(1))).setImageResource(R.mipmap.icon_triangle_to_up);
-
 
                 }
 
@@ -213,6 +217,7 @@ public class WuliuFragment extends Fragment {
                 } else {
 
                     mSortPopw.showAsDropDown(v);
+                    mSortTv.setTextColor(Color.parseColor("#0498fb"));
                     // mGrayView.setAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.pop_enter_anim));
                     mGrayView.setVisibility(View.VISIBLE);
                     mGrayView.setClickable(false);
@@ -228,7 +233,7 @@ public class WuliuFragment extends Fragment {
             @Override
             public void onDismiss() {
                 ((ImageView) (mPopwSortll.getChildAt(1))).setImageResource(R.mipmap.icon_triangle_to_down);
-
+                mSortTv.setTextColor(Color.parseColor("#000000"));
                 // mGrayView.setAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.pop_exit_anim));
                 mGrayView.setVisibility(View.GONE);
             }
@@ -251,8 +256,8 @@ public class WuliuFragment extends Fragment {
 
         mMain = (LinearLayout) view.findViewById(R.id.wuliu_fragment_main_ll);
         mDestTv = (TextView) view.findViewById(R.id.wuliu_fragment_destplace_tv);
-        mCityTextView = (TextView) view.findViewById(R.id.wuliu_fragment_startplace_tv);
-        mShaixuanTextView = (TextView) view.findViewById(R.id.wuliu_fragment_paixu_tv);
+        mStartTv = (TextView) view.findViewById(R.id.wuliu_fragment_startplace_tv);
+        mSortTv = (TextView) view.findViewById(R.id.wuliu_fragment_paixu_tv);
 
         mGrayView = view.findViewById(R.id.wuliu_fragment_gray_layout);
 
@@ -272,6 +277,8 @@ public class WuliuFragment extends Fragment {
 
         View citypopupview = mLayoutInflater.inflate(R.layout.ppw_city, null);
         mStartPopw = new PopupWindow(citypopupview, ViewGroup.LayoutParams.WRAP_CONTENT, 450, true);
+
+
         //ColorDrawable dw = new ColorDrawable(0xb0000000);
         //mStartPopw.setBackgroundDrawable(dw);
         mStartPopw.setBackgroundDrawable(new BitmapDrawable());
@@ -283,8 +290,7 @@ public class WuliuFragment extends Fragment {
         //mStartPopw.setAnimationStyle(R.style.pop_anim_style);
 
 
-
-        View paixupopupview = mLayoutInflater.inflate(R.layout.ppw_shaixuan, null);
+        View paixupopupview = mLayoutInflater.inflate(R.layout.ppw_sort, null);
         mSortPopw = new PopupWindow(paixupopupview, ViewGroup.LayoutParams.MATCH_PARENT, 450, true);
 
         mSortPopw.setBackgroundDrawable(new BitmapDrawable());
@@ -294,7 +300,7 @@ public class WuliuFragment extends Fragment {
         mSortPopw.setFocusable(true);
 
 
-       // mSortPopw.setAnimationStyle(R.style.pop_anim_style);
+        // mSortPopw.setAnimationStyle(R.style.pop_anim_style);
 
 
         mPaixuPopwLv = (ListView) paixupopupview.findViewById(R.id.popw_shaixuan_lv);

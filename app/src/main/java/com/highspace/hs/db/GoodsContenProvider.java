@@ -54,7 +54,7 @@ public class GoodsContenProvider extends ContentProvider {
                 }
                 return db.query("goods_info", projection, where, selectionArgs, null, null, sortOrder);
             default:
-                throw new IllegalArgumentException("this is unkown mUri:" + uri);
+                throw new IllegalArgumentException("this is unkown pUri:" + uri);
         }
 
     }
@@ -68,7 +68,7 @@ public class GoodsContenProvider extends ContentProvider {
             case SIMGLE_PARAM:
                 return "com.highspace.hs/goods/#";
             default:
-                throw new IllegalArgumentException("this is unkown mUri:" + uri);
+                throw new IllegalArgumentException("this is unkown pUri:" + uri);
         }
 
     }
@@ -85,7 +85,7 @@ public class GoodsContenProvider extends ContentProvider {
                 Uri insertUri = ContentUris.withAppendedId(uri, id);
                 return insertUri;
             default:
-                throw new IllegalArgumentException("this is unkown mUri:" + uri);
+                throw new IllegalArgumentException("this is unkown pUri:" + uri);
         }
 
     }
@@ -105,7 +105,7 @@ public class GoodsContenProvider extends ContentProvider {
                 }
                 return db.delete("goods_info", where, selectionArgs);
             default:
-                throw new IllegalArgumentException("this is unkown mUri:" + uri);
+                throw new IllegalArgumentException("this is unkown pUri:" + uri);
         }
 
     }
@@ -124,7 +124,7 @@ public class GoodsContenProvider extends ContentProvider {
                 }
                 return db.update("goods_info", values, where, selectionArgs);
             default:
-                throw new IllegalArgumentException("this is unkown mUri:" + uri);
+                throw new IllegalArgumentException("this is unkown pUri:" + uri);
         }
     }
 }

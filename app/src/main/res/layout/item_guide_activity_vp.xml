@@ -3,19 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <ImageView
         android:id="@+id/item_guide_activity_iv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/icon_guide3" />
-
+        android:layout_height="match_parent" />
     <Button
         android:id="@+id/item_guide_activity_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:text="立刻体验"
-        android:textColor="#000" />
-
+        android:layout_marginBottom="15dp"
+        android:background="@mipmap/bg_guide_btn" />
 </FrameLayout>

@@ -79,6 +79,7 @@ public class MyGoodsInfoAdapter extends CursorAdapter {
     }
 
     class ViewHolder {
+
         ImageView mMyGoodsImg;
         TextView mMyGoodsStart;
         TextView mMyGoodsDest;

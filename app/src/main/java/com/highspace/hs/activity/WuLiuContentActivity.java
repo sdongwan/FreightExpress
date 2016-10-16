@@ -3,9 +3,8 @@ package com.highspace.hs.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +18,7 @@ import android.widget.Toast;
 
 import com.highspace.hs.R;
 import com.highspace.hs.adapter.WuLiuAdapter;
-import com.highspace.hs.util.DensityUtil;
-import com.highspace.hs.util.ImageLoadUtil;
-import com.highspace.hs.util.MobleUtil;
 import com.highspace.hs.view.GradationScrollView;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 import java.util.ArrayList;
 
@@ -58,6 +53,9 @@ public class WuLiuContentActivity extends Activity implements GradationScrollVie
     private LinearLayout mXiadanLl;
 
     private TextView mXiadanTv;
+    private ImageView mCollectIv;
+
+    private TextView mZhuanXianTv;
 
 
     @Override
@@ -71,6 +69,14 @@ public class WuLiuContentActivity extends Activity implements GradationScrollVie
     }
 
     private void initEvent() {
+        mZhuanXianTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(WuLiuContentActivity.this, "专线详情", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 /*
         mWuliuBigImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +85,15 @@ public class WuLiuContentActivity extends Activity implements GradationScrollVie
             }
         });
         */
+        mCollectIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(WuLiuContentActivity.this, "收藏成功", Toast.LENGTH_SHORT).show();
+                // TODO: 2016/10/11
+            }
+        });
+
+
         mXiadanTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,21 +152,33 @@ public class WuLiuContentActivity extends Activity implements GradationScrollVie
                 Toast.makeText(WuLiuContentActivity.this, "xiadan", Toast.LENGTH_SHORT).show();
             }
         });
+        /*
         ImageLoadUtil.getImageLoader(this).loadImage("http://www.sdongwan.top/images/a.png", new SimpleImageLoadingListener() {
             @Override
             public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
                 super.onLoadingComplete(imageUri, view, loadedImage);
+                // TODO: 2016/10/11
+
                 Bitmap target = Bitmap.createBitmap(MobleUtil.getScreenWith(WuLiuContentActivity.this), DensityUtil.dp2px(WuLiuContentActivity.this, 260), loadedImage.getConfig());
                 Canvas canvas = new Canvas(target);
                 canvas.drawBitmap(loadedImage, null, new Rect(0, 0, target.getWidth(), target.getHeight()), null);
                 mWuliuBigImageView.setImageBitmap(target);
 
+
             }
         });
+        */
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.icon_all);
+        mWuliuBigImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        mWuliuBigImageView.setImageBitmap(bitmap);
+
         // TODO: 2016/9/27 图片
     }
 
     private void initView() {
+        mZhuanXianTv = (TextView) findViewById(R.id.wuliu_content_zhuanxian_tv);
+        mCollectIv = (ImageView) findViewById(R.id.wuliucontentactivity_collect);
+
         mXiadanTv = (TextView) findViewById(R.id.wuliu_content_xiadan);
 
         mWuliuBigImageView = (ImageView) findViewById(R.id.wuliu_big_imageview);

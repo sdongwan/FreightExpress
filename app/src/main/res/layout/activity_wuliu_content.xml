@@ -20,39 +20,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/wuliu_big_imageview"
-                    android:layout_width="match_parent"
-                    android:layout_height="260dp"
-                    android:src="@mipmap/ic_launcher" />
 
-                <ImageView
-                    android:id="@+id/wuliucontentactivity_lookimg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/wuliu_big_imageview"
-                    android:layout_alignParentRight="true"
-                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
+                    android:id="@+id/wuliu_content_company_name_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/wuliu_big_imageview"
                     android:layout_margin="8dp"
-                    android:text="songdongwan"
+                    android:text="XXXX物流公司"
                     android:textColor="@android:color/black"
-                    android:textSize="23sp" />
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/wuliu_big_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true" />
+                <ImageView
+                    android:id="@+id/wuliucontentactivity_lookimg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/wuliu_big_imageview"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_see_image" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_margin="8dp"
                     android:src="@mipmap/ic_launcher" />
 
@@ -60,34 +71,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="s" />
+                    android:text="运单数：10" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="s" />
+                    android:text="浏览数：2" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="35dp"
 
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="s" />
+                    android:text="点赞数：2" />
 
             </LinearLayout>
 
@@ -103,8 +112,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:layout_margin="10dp"
                     android:src="@mipmap/ic_launcher" />
 
@@ -113,68 +122,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="8dp"
-                    android:text="物流"
+                    android:text="xxx物流"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="1"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:background="@android:color/darker_gray" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="1"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -183,7 +133,7 @@
                     android:gravity="center">
 
                     <TextView
-
+                        android:id="@+id/wuliu_content_zhuanxian_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/shape_text_view"
@@ -192,12 +142,15 @@
                         android:textColor="@android:color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
+
+
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
                 android:background="@android:color/darker_gray" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -206,28 +159,28 @@
                 android:layout_margin="10dp"
                 android:text="类似专线"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:background="@android:color/darker_gray" />
+                android:textSize="18sp" />
 
             <ListView
                 android:id="@+id/wuliucontent_listview"
                 android:layout_width="match_parent"
-                android:layout_height="630dp"
+                android:layout_height="500dp"
                 android:scrollbars="none" />
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@android:color/darker_gray" />
+            -->
 
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
         </LinearLayout>
 
 
     </com.highspace.hs.view.GradationScrollView>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -285,21 +238,14 @@
 
         <ImageView
             android:id="@+id/wuliucontentactivity_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            android:src="@mipmap/ic_launcher" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="专线详情"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:padding="10dp"
+            android:src="@mipmap/icon_back" />
 
         <ImageView
             android:id="@+id/wuliucontentactivity_collect"
@@ -308,7 +254,16 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_margin="5dp"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_margin="6dp"
+            android:src="@mipmap/icon_collect" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专线详情"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </RelativeLayout>

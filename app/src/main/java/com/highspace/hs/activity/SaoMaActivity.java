@@ -126,8 +126,8 @@ public class SaoMaActivity extends FragmentActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (MainActivity.mHomeFragment != null) {
-            MainActivity.mHomeFragment.onActivityResult(requestCode, resultCode, data);
+        if (MainActivity.pHomeFragment != null) {
+            MainActivity.pHomeFragment.onActivityResult(requestCode, resultCode, data);
             finish();
         }
 

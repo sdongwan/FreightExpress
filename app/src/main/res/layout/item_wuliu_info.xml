@@ -1,16 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list_item_textview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:text="songodgnwan"
-    android:padding="5dp"
-    android:textColor="#000"
-    android:textSize="16sp">
-
-
-</TextView>
-    -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
@@ -25,30 +13,58 @@
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="5dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/item_wuliu_info_companyname_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:maxLines="1"
-            android:text="wuliu"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
 
-        <TextView
-            android:id="@+id/item_wuliu_info_inroduce_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:maxLines="1"
-            android:text="wuliugfds"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/item_wuliu_company_name_tv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:maxLines="1"
+                android:text="江门至广州专线：XXX物流公司"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/item_wuliu_zhuanxian_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="3dp"
+                android:text="公司地址："
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/item_wuliu_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="江门市XXX物流公司"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

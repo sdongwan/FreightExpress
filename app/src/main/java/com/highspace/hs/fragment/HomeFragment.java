@@ -3,11 +3,7 @@ package com.highspace.hs.fragment;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
-
 import android.graphics.BitmapFactory;
-
-import android.graphics.Canvas;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,16 +34,9 @@ import com.highspace.hs.activity.NearGoodsActivity;
 import com.highspace.hs.activity.ReleaseGoodsActivity;
 import com.highspace.hs.activity.SaoMaActivity;
 import com.highspace.hs.adapter.HomeCarouselAdapter;
-import com.highspace.hs.util.DensityUtil;
 import com.highspace.hs.util.FileUtil;
-import com.highspace.hs.util.ImageLoadUtil;
-import com.highspace.hs.util.MobleUtil;
 import com.highspace.hs.util.SharedPreferencesUtil;
 import com.highspace.hs.view.LoadProgressDialog;
-
-import com.nostra13.universalimageloader.core.assist.FailReason;
-
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import java.util.ArrayList;
@@ -90,7 +79,6 @@ public class HomeFragment extends Fragment {
     private TextView mComment;
 
     private Animation mAnimation;
-
 
 
     private String mPlace = "";
@@ -148,7 +136,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        if(mAnimation!=null){
+        if (mAnimation != null) {
             mAnimotionTextTv.startAnimation(mAnimation);
         }
     }
@@ -255,7 +243,6 @@ public class HomeFragment extends Fragment {
         mAnimotionTextTv.startAnimation(mAnimation);
 
 
-
         mMyOrderTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -286,41 +273,13 @@ public class HomeFragment extends Fragment {
         mLacateplaceTv = (TextView) view.findViewById(R.id.home_fragment_titlebar_locatedplace_tv);
         mViewPager = (ViewPager) view.findViewById(R.id.homefragment_lubo_vp);
         mImageViewList = new ArrayList<>();
-
+        Bitmap bitmap = BitmapFactory.decodeResource(getActivity().getResources(), R.mipmap.icon_all);
         for (int i = 0; i < 3; i++) {
 
             final ImageView imageView = new ImageView(this.getActivity());
             imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            ImageLoadUtil.getImageLoader(getContext()).loadImage("http://www.sdongwan.top/images/a.png", new SimpleImageLoadingListener() {
-
-                @Override
-                public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                    super.onLoadingComplete(imageUri, view, loadedImage);
-                    // loadedImage.setHeight(DensityUtil.dp2px(getContext(), 180));
-                    //loadedImage.setWidth(MobleUtil.getScreenWith(getActivity()));
-
-                    Bitmap target = Bitmap.createBitmap(MobleUtil.getScreenWith(getContext()), DensityUtil.dp2px(getContext(), 180), loadedImage.getConfig());
-                    Canvas canvas = new Canvas(target);
-                    canvas.drawBitmap(loadedImage, null, new Rect(0, 0, target.getWidth(), target.getHeight()), null);
-                    imageView.setImageBitmap(target);
-
-                }
-
-
-                @Override
-                public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-                    super.onLoadingFailed(imageUri, view, failReason);
-                    Bitmap loadedImage = BitmapFactory.decodeResource(getActivity().getResources(),R.mipmap.icon_no_img);
-                    Bitmap target = Bitmap.createBitmap(MobleUtil.getScreenWith(getContext()), DensityUtil.dp2px(getContext(), 180), loadedImage.getConfig());
-                    Canvas canvas = new Canvas(target);
-                    canvas.drawBitmap(loadedImage, null, new Rect(0, 0, target.getWidth(), target.getHeight()), null);
-                    imageView.setImageBitmap(target);
-
-                }
-
-            });
-
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setImageBitmap(bitmap);
             mImageViewList.add(imageView);
 
         }

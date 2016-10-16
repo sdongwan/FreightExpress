@@ -41,7 +41,7 @@
         android:layout_height="30dp"
         android:background="@android:color/white"
         app:pstsDividerColor="@android:color/white"
-        app:pstsIndicatorColor="@android:color/holo_green_light"
+        app:pstsIndicatorColor="#ff0000"
         app:pstsIndicatorHeight="5dp"
         app:pstsShouldExpand="true"
         app:pstsUnderlineColor="@android:color/darker_gray"

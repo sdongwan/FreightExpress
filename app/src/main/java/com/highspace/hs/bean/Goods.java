@@ -11,7 +11,7 @@ public class Goods {
     private String startPlace;
     private String destination;
     private String weight;
-    private String volume;//体积
+    //private String volume;//体积
     private String decribe;
     private String phoneNum;
     private String remark;//备注
@@ -35,12 +35,12 @@ public class Goods {
         setDate();
     }
 
-    public Goods(String startPlace, String destination, String weight, String volume, String decribe, String phoneNum, String remark) {
+    public Goods(String startPlace, String destination, String weight, String decribe, String phoneNum, String remark) {
         setDate();
         this.startPlace = startPlace;
         this.destination = destination;
         this.weight = weight;
-        this.volume = volume;
+        //this.volume = volume;
         this.decribe = decribe;
         this.phoneNum = phoneNum;
         this.remark = remark;
@@ -70,14 +70,16 @@ public class Goods {
     public void setWeight(String weight) {
         this.weight = weight;
     }
-
-    public String getVolume() {
+/*
+  public String getVolume() {
         return volume;
     }
 
     public void setVolume(String volume) {
         this.volume = volume;
     }
+ */
+
 
     public String getDecribe() {
         return decribe;

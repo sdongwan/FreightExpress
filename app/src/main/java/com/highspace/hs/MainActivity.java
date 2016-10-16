@@ -33,16 +33,19 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     private FragmentManager mFragmentManager = getSupportFragmentManager();
     private FragmentTransaction mFragmentTransaction;
 
-    public static HomeFragment mHomeFragment;
+
 
     private WuliuFragment mWuliuFragment;
-    private MyFragment mMyFragment;
+
+
+    public static MyFragment pMyFragment;
+    public static HomeFragment pHomeFragment;
     //  private WayBillFragment wayBillFragment;
 
     public static Context mContext;
 
 
-    // public static Uri mUri;
+    // public static Uri pUri;
 
 
     // private Handler handler;
@@ -74,9 +77,9 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
                 //Bundle bundle = new Bundle();
-                //bundle.putParcelable("mUri", Crop.getOutput(result));
-                //mMyFragment.setArguments(bundle);
-                mFragmentTransaction.replace(R.id.main_framelayout, mMyFragment);
+                //bundle.putParcelable("pUri", Crop.getOutput(result));
+                //pMyFragment.setArguments(bundle);
+                mFragmentTransaction.replace(R.id.main_framelayout, pMyFragment);
                 mFragmentTransaction.commit();
             }
         };
@@ -120,16 +123,16 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         // mWaybillTabRbt = (RadioButton) findViewById(R.id.tab_waybill);
 
 
-        mHomeFragment = HomeFragment.newInstance();
+        pHomeFragment = HomeFragment.newInstance();
         mWuliuFragment = WuliuFragment.newInstance();
         // wayBillFragment = WayBillFragment.newInstance();
-        mMyFragment = MyFragment.newInstance();
+        pMyFragment = MyFragment.newInstance();
 
 
-        mTabFragmentsList.add(mHomeFragment);
+        mTabFragmentsList.add(pHomeFragment);
         mTabFragmentsList.add(mWuliuFragment);
         // mTabFragmentsList.add(wayBillFragment);
-        mTabFragmentsList.add(mMyFragment);
+        mTabFragmentsList.add(pMyFragment);
 
 
         mTabRbtsList.add(mHomeTabRbt);
@@ -137,7 +140,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         mTabRbtsList.add(mWaybillTabRbt);
         mTabRbtsList.add(mMyTabRbt);
         mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.replace(R.id.main_activity_framelayout, mHomeFragment);
+        mFragmentTransaction.replace(R.id.main_activity_framelayout, pHomeFragment);
         mFragmentTransaction.commit();
 
         // mTabVP.setAdapter(new TabAdapter(getSupportFragmentManager(), mTabFragmentsList));
@@ -151,7 +154,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         mFragmentTransaction = mFragmentManager.beginTransaction();
         switch (checkedId) {
             case R.id.main_activity_tab_home_rbt:
-                mFragmentTransaction.replace(R.id.main_activity_framelayout, mHomeFragment);
+                mFragmentTransaction.replace(R.id.main_activity_framelayout, pHomeFragment);
 
                 break;
             case R.id.main_activity_tab_wuliu_rbt:
@@ -169,7 +172,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 
             case R.id.main_activity_tab_my_rbt:
 
-                mFragmentTransaction.replace(R.id.main_activity_framelayout, mMyFragment);
+                mFragmentTransaction.replace(R.id.main_activity_framelayout, pMyFragment);
 
                 break;
 
@@ -203,20 +206,21 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent result) {
 
-        mMyFragment.onActivityResult(requestCode, resultCode, result);
-        mHomeFragment.onActivityResult(requestCode, resultCode, result);
+        pMyFragment.onActivityResult(requestCode, resultCode, result);
+        pHomeFragment.onActivityResult(requestCode, resultCode, result);
 
 
     }
 
 
-/*
+
     @Override
     public void startActivityForResult(Intent intent, int requestCode) {
-        //super.startActivityForResult(intent, requestCode);
-        mMyFragment.startActivityForResult(intent,requestCode);
+        super.startActivityForResult(intent, requestCode);
+        //pMyFragment.startActivityForResult(intent,requestCode);
+       // pHomeFragment.startActivityForResult(intent,requestCode);
     }
-*/
+
 
 
 }

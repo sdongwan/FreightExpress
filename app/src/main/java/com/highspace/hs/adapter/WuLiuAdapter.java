@@ -8,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.highspace.hs.R;
-import com.highspace.hs.util.ImageLoadUtil;
 
 import java.util.ArrayList;
 
@@ -49,21 +47,27 @@ public class WuLiuAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.item_wuliu_info, null);
-            viewHolder=new ViewHolder();
-            viewHolder.mNameTV = (TextView) convertView.findViewById(R.id.item_wuliu_info_companyname_tv);
-            viewHolder.mJianjieTv = (TextView) convertView.findViewById(R.id.item_wuliu_info_inroduce_tv);
-            viewHolder.mImg = (ImageView) convertView.findViewById(R.id.item_wuliu_info_iv);
+            viewHolder = new ViewHolder();
+            viewHolder.companyNameTV = (TextView) convertView.findViewById(R.id.item_wuliu_company_name_tv);
+
+            viewHolder.img = (ImageView) convertView.findViewById(R.id.item_wuliu_info_iv);
+            viewHolder.address = (TextView) convertView.findViewById(R.id.item_wuliu_address_tv);
+
+
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.mNameTV.setText("XXX物流有限公司");
-        viewHolder.mJianjieTv.setText("广东省江门市XXXXX");
+
+        /*
+         viewHolder.companyNameTV.setText("");
+        viewHolder.destTv.setText("");
+        viewHolder.startTv.setText("");
+         */
 
 
-        // TODO: 2016/9/27 图片大小设置   ImageLoadUtil.getImageLoader(mContext).displayImage("http://www.sdongwan.top/images/a.png", viewHolder.mImg);
-        viewHolder.mImg.setImageResource(R.mipmap.icon_no_img);
-
+        // TODO: 2016/9/27 图片大小设置   ImageLoadUtil.getImageLoader(mContext).displayImage("http://www.sdongwan.top/images/a.png", viewHolder.img);
+        viewHolder.img.setImageResource(R.mipmap.icon_no_img);
 
         return convertView;
 
@@ -71,9 +75,12 @@ public class WuLiuAdapter extends BaseAdapter {
 
     class ViewHolder {
 
-        TextView mNameTV;
-        TextView mJianjieTv;
-        ImageView mImg;
+        TextView companyNameTV;
+        //TextView startTv;
+        //TextView destTv;
+        ImageView img;
+        TextView address;
+
     }
 
 

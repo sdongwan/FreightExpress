@@ -3,7 +3,6 @@ package com.highspace.hs.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -26,7 +25,6 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
-import com.baidu.mapapi.search.poi.PoiCitySearchOption;
 import com.baidu.mapapi.search.poi.PoiDetailResult;
 import com.baidu.mapapi.search.poi.PoiIndoorResult;
 import com.baidu.mapapi.search.poi.PoiResult;
@@ -92,8 +90,8 @@ public class NearGoodsActivity extends Activity implements OnGetRoutePlanResultL
     }
 
     private void initView() {
-        mCompanyBtn = (Button) findViewById(R.id.near_goods_near_company_btn);
-        mCarBtn = (Button) findViewById(R.id.near_goods_near_car_btn);
+        //mCompanyBtn = (Button) findViewById(R.id.near_goods_near_company_btn);
+        //mCarBtn = (Button) findViewById(R.id.near_goods_near_car_btn);
         initBaiduMap();
 
     }
@@ -189,7 +187,7 @@ public class NearGoodsActivity extends Activity implements OnGetRoutePlanResultL
 
     private void initEvent() {
 
-
+/*
         mCompanyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -211,6 +209,7 @@ public class NearGoodsActivity extends Activity implements OnGetRoutePlanResultL
                 // TODO: 2016/10/3
             }
         });
+        */
     }
 
 

@@ -1,34 +1,52 @@
 package com.highspace.hs.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 import com.highspace.hs.R;
-import com.highspace.hs.bean.AddressMessage;
-
-import java.util.List;
 
 /**
  * Created by wenyue on 2016/10/10.
  */
 
-public class AddressAdapter extends ArrayAdapter<AddressMessage> {
+public class AddressAdapter extends CursorAdapter {
     private Context mContext;
-    private List<AddressMessage> messageList;
-    public AddressAdapter(Context context, List<AddressMessage> datds) {
-        super(context, -1, datds);
-        messageList = datds;
-        mContext = context;
+
+    /*public AddressAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
+        super(context, layout, c, from, to, flags);
+    }*/
+
+    public AddressAdapter(Context context, Cursor c, int flags) {
+        super(context, c, flags);
 
     }
 
-    @NonNull
+    @Override
+    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+        ViewHolder viewHolder = new ViewHolder();
+        View view = LayoutInflater.from(context).inflate(R.layout.address_list_item, parent, false);
+        viewHolder.na = (TextView) view.findViewById(R.id.name);
+        viewHolder.pn = (TextView) view.findViewById(R.id.number);
+        viewHolder.ad = (TextView) view.findViewById(R.id.ads);
+        view.setTag(viewHolder);
+        return view;
+    }
+
+    @Override
+    public void bindView(View view, Context context, Cursor cursor) {
+        ViewHolder viewHolder = (ViewHolder) view.getTag();
+        viewHolder.na.setText(cursor.getString(cursor.getColumnIndex("addressName")));
+        viewHolder.pn.setText(cursor.getString(cursor.getColumnIndex("phoneNumber")));
+        viewHolder.ad.setText(cursor.getString(cursor.getColumnIndex("addressLocation")));
+    }
+
+
+   /* @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         AddressMessage message = getItem(position);
@@ -51,7 +69,7 @@ public class AddressAdapter extends ArrayAdapter<AddressMessage> {
         viewHolder.pn.setText(message.getPhoneNumber());
         viewHolder.ad.setText(message.getAds());
         return view;
-    }
+    }*/
     class ViewHolder{
         TextView na;
         TextView pn;

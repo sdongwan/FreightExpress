@@ -6,6 +6,8 @@ import android.os.Looper;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
+import com.highspace.hs.app.AppAplication;
+
 /**
  * Created by Administrator on 2016/9/20.
  */
@@ -33,6 +35,7 @@ public class DoubleClickExitHelper {
                 mBackToast.cancel();
             }
             mActivity.finish();
+            //AppAplication.getInstance().exitApplication();
             return true;
         } else {
             isOnKeyBacking = true;
